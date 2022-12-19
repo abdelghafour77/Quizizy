@@ -1,0 +1,42 @@
+$primary_1: #9a24b2;
+$primary_2: #831f97;
+$primary_3: #b129cd;
+
+body {
+  background-color: $primary_1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card-main {
+    width: min(100% - 2em, 40em);
+    height: 400px;
+    border-radius: 50px;
+    background: $primary_1;
+    box-shadow: 35px 35px 70px $primary_2, -35px -35px 70px $primary_3;
+  }
+}
+.f-inp {
+  padding: 11px 25px;
+  background-color: $primary_1;
+  border: 1px solid $primary_2;
+  line-height: 1;
+  border-radius: 20px;
+  box-shadow: 35px 35px 70px $primary_2, -35px -35px 70px $primary_3;
+}
+
+.f-inp:first-child {
+  margin-bottom: 15px;
+}
+
+.f-inp input {
+  width: 100%;
+  font-size: 13.4px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.f-inp input::placeholder {
+  color: $primary_1;
+}
