@@ -98,4 +98,148 @@ var allTasks = [
             ],
             'justify': 'B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases.'
       },
+      {
+            'id': '5',
+            'question': 'Which of the following is an AWS responsibility under the AWS shared responsibility model?',
+            'answers': [
+                  {
+                        'answer': 'A) Configuring third-party applications',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'B) Maintaining physical hardware',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'C) Securing application access and data',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'D) Managing guest operating systems',
+                        'correct': false
+                  }
+
+            ],
+            'justify': 'B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases.'
+      },
+      {
+            'id': '6',
+            'question': 'Which component of the AWS global infrastructure does Amazon CloudFront use to ensure low-latency delivery?',
+            'answers': [
+                  {
+                        'answer': 'A) AWS Regions',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'B) Edge locations',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'C) Availability Zones',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'D) Virtual Private Cloud (VPC)',
+                        'correct': false
+                  }
+
+            ],
+            'justify': 'B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases.'
+      },
+      {
+            'id': '7',
+            'question': 'How would a system administrator add an additional layer of login security to a user\'s AWS Management Console?',
+            'answers': [
+                  {
+                        'answer': 'A) Use Amazon Cloud Directory',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'B) Audit AWS Identity and Access Management (IAM) roles',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'C) Enable multi-factor authentication',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'D) Enable AWS CloudTrail',
+                        'correct': false
+                  }
+
+            ],
+            'justify': 'B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases.'
+      },
+      {
+            'id': '8',
+            'question': 'Which service can identify the user that made the API call when an Amazon EC2 instance is terminated?',
+            'answers': [
+                  {
+                        'answer': 'A) AWS Trusted Advisor',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'B) AWS CloudTrail',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'C) AWS X-Ray',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'D) AWS Identity and Access Management (AWS IAM)',
+                        'correct': false
+                  }
+
+            ],
+            'justify': 'B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases.'
+      },
+      {
+            'id': '9',
+            'question': 'Which service would be used to send alerts based on Amazon CloudWatch alarms?',
+            'answers': [
+                  {
+                        'answer': 'A) Amazon Simple Notification Service (Amazon SNS)',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'B) AWS CloudTrail',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'C) AWS Trusted Advisor',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'D) Amazon Route 53',
+                        'correct': false
+                  }
+
+            ],
+            'justify': 'B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases.'
+      },
+      {
+            'id': '10',
+            'question': 'Where can a user find information about prohibited actions on the AWS infrastructure?',
+            'answers': [
+                  {
+                        'answer': 'A) AWS Trusted Advisor',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'B) AWS Identity and Access Management (IAM)',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'C) AWS Billing Console',
+                        'correct': false
+                  },
+                  {
+                        'answer': 'D) AWS Acceptable Use Policy',
+                        'correct': false
+                  }
+
+            ],
+            'justify': 'B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases.'
+      },
 ];
