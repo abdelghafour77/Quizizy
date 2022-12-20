@@ -1,47 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  line-height: 17px;
+  color: #6c7587;
   background-color: #9a24b2;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-body .card-main {
+
+.card-main {
   width: min(100% - 2em, 40em);
-  height: 400px;
+  height: 200px;
   border-radius: 50px;
   background: #9a24b2;
-  box-shadow: 35px 35px 70px #831f97, -35px -35px 70px #b129cd;
+  box-shadow: 35px 35px 70px rgba(131, 31, 151, 0.4), -35px -35px 70px #b129cd;
+  padding: 4rem 1rem;
 }
 
-.f-inp {
-  padding: 11px 25px;
-  background-color: #9a24b2;
-  border: 1px solid #831f97;
-  line-height: 1;
-  border-radius: 20px;
-  box-shadow: 35px 35px 70px #831f97, -35px -35px 70px #b129cd;
-}
-
-.f-inp:first-child {
-  margin-bottom: 15px;
-}
-
-.f-inp input {
+label,
+input,
+button {
+  display: block;
   width: 100%;
-  font-size: 13.4px;
   padding: 0;
-  margin: 0;
-  border: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  border: 3px solid rgba(255, 255, 255, 0);
 }
 
-.f-inp input::-moz-placeholder {
-  color: #9a24b2;
+.inp {
+  color: white;
+  text-align: left;
+  margin-top: 30px;
+  background: #9a24b2;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #831f97, inset -6px -6px 6px #b129cd;
+  margin-bottom: 3rem;
+}
+.inp::-moz-placeholder {
+  color: rgb(255, 255, 255);
+}
+.inp:-ms-input-placeholder {
+  color: rgb(255, 255, 255);
+}
+.inp::placeholder {
+  color: rgb(255, 255, 255);
+}
+.inp:focus {
+  box-shadow: none;
+  border-color: rgba(217, 111, 239, 0.9);
+}
+.inp:hover {
+  box-shadow: none;
+  border-color: rgba(217, 111, 239, 0.9);
+  transition: 0.5s;
 }
 
-.f-inp input:-ms-input-placeholder {
-  color: #9a24b2;
+button {
+  color: white;
+  margin-top: 20px;
+  background: #9a24b2;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #831f97, -6px -6px 6px #b129cd;
+  transition: 0.5s;
 }
-
-.f-inp input::placeholder {
-  color: #9a24b2;
+button:hover {
+  box-shadow: none;
+  border-color: rgba(217, 111, 239, 0.9);
+  transition: 0.5s;
+}
+button .submit {
+  width: 70px;
 }/*# sourceMappingURL=style.css.map */
