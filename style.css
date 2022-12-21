@@ -1,85 +1,168 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+body,
+html {
+  background-color: #ebecf0;
+  margin: 0;
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 17px;
-  line-height: 17px;
-  color: #6c7587;
-  background-color: #9a24b2;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.card-main {
-  width: min(100% - 2em, 40em);
-  height: 200px;
-  border-radius: 50px;
-  background: #9a24b2;
-  box-shadow: 35px 35px 70px rgba(131, 31, 151, 0.4), -35px -35px 70px #b129cd;
-  padding: 4rem 1rem;
-}
-
-label,
+body,
+p,
 input,
+select,
+textarea,
 button {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+}
+
+div,
+p {
+  color: #535762;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+form {
+  padding: 16px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.segment {
+  padding: 32px 0;
+  text-align: center;
+}
+
+button,
+input {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius: 320px;
+  padding: 16px;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+label {
   display: block;
+  margin-bottom: 24px;
   width: 100%;
-  padding: 0;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-  border: 3px solid rgba(255, 255, 255, 0);
 }
 
-.inp {
-  color: white;
-  text-align: left;
-  margin-top: 30px;
-  background: #9a24b2;
-  padding: 10px;
-  padding-left: 20px;
-  height: 50px;
-  font-size: 14px;
-  border-radius: 50px;
-  box-shadow: inset 6px 6px 6px #831f97, inset -6px -6px 6px #b129cd;
-  margin-bottom: 3rem;
+input {
+  margin-right: 8px;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
 }
-.inp::-moz-placeholder {
-  color: rgb(255, 255, 255);
-}
-.inp:-ms-input-placeholder {
-  color: rgb(255, 255, 255);
-}
-.inp::placeholder {
-  color: rgb(255, 255, 255);
-}
-.inp:focus {
-  box-shadow: none;
-  border-color: rgba(217, 111, 239, 0.9);
-}
-.inp:hover {
-  box-shadow: none;
-  border-color: rgba(217, 111, 239, 0.9);
-  transition: 0.5s;
+input:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
 
 button {
-  color: white;
-  margin-top: 20px;
-  background: #9a24b2;
-  height: 40px;
-  border-radius: 20px;
+  color: #61677c;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
-  font-weight: 900;
-  box-shadow: 6px 6px 6px #831f97, -6px -6px 6px #b129cd;
-  transition: 0.5s;
+  font-weight: 600;
 }
 button:hover {
-  box-shadow: none;
-  border-color: rgba(217, 111, 239, 0.9);
-  transition: 0.5s;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
 }
-button .submit {
-  width: 70px;
+button:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+button .icon {
+  margin-right: 8px;
+}
+button.unit {
+  border-radius: 8px;
+  line-height: 0;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+  font-size: 19.2px;
+}
+button.unit .icon {
+  margin-right: 0;
+}
+button.red {
+  display: block;
+  width: 100%;
+  color: #ae1100;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.input-group label {
+  margin: 0;
+  flex: 1;
+}
+
+.neumorphic-checkbox {
+  padding: 20px;
+  position: relative;
+  margin: 0 5px;
+  transition: all 0.25s ease;
+}
+
+.neumorphic-checkbox::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #a3aab9;
+  background: transparent;
+  top: 50%;
+  left: 96%;
+  transform: translate(-50%, -50%);
+  transition: all 0.25s ease;
+}
+
+.neumorphic-checkbox_active {
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgb(255, 255, 255), inset 0px 0px 4px rgba(255, 255, 255, 0), inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px rgb(255, 255, 255), 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+}
+
+.neumorphic-checkbox_active::after {
+  background-color: #a3aab9;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+#question {
+  margin-bottom: 6rem;
 }/*# sourceMappingURL=style.css.map */

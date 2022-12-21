@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quizizy</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Quizizy</title>
-</head>
+  <body>
+    <section id="welcome">
+      <form>
+        <div class="segment">
+          <h1>Welcome to QUIZIZY</h1>
+        </div>
+        <label>
+          <input type="text" placeholder="Full name" />
+        </label>
+        <button class="red" type="button" onclick="start()"><i class="icon ion-md-lock"></i>Start the quiz</button>
+      </form>
+    </section>
 
-<body>
-  <div class="card-main">
-    <input type="text" class="inp" placeholder="Full Name" />
-
-    <button class="submit">Start the Quizz</button>
-  </div>
-  <div class="card-main">
-    <input type="text" class="inp" placeholder="Full Name" />
-
-    <button class="submit">Start the Quizz</button>
-  </div>
-
-</body>
-
+    <section id="questions">
+      <h3 id="timer">30 s</h3>
+      <h2 id="question">Why is AWS more economical than traditional data centers for applications with varying compute workloads?</h2>
+      <div class="wrapper">
+        <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
+          <p>A) Amazon EC2 costs are billed on a monthly basis.</p>
+          <div type="button"></div>
+        </button>
+        <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
+          <p>B) Users retain full administrative access to their Amazon EC2 instances.</p>
+          <div type="button"></div>
+        </button>
+        <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
+          <p>C) Amazon EC2 instances can be launched on demand when needed.</p>
+          <div type="button"></div>
+        </button>
+        <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
+          <p>D) Users can permanently run enough instances to handle peak workloads.</p>
+          <div type="button"></div>
+        </button>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
