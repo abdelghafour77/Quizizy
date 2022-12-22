@@ -12,7 +12,6 @@ function start() {
       function countdown() {
             if (timeLeft == -1) {
                   clearTimeout(timerId);
-
             } else {
                   elem.text(timeLeft + ' s');
                   timeLeft--;
