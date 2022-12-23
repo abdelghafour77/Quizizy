@@ -156,13 +156,6 @@ button.red {
   display: flex;
 }
 
-@media (min-width: 600px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-}
 #question {
   margin-bottom: 6rem;
 }
@@ -174,4 +167,9 @@ button.red {
 #next {
   margin-top: 2rem;
   width: 100%;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */

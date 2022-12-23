@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Quizizy</title>
-  </head>
 
-  <body>
-    <section id="welcome">
-      <form>
-        <div class="segment">
-          <h1>Welcome to QUIZIZY</h1>
-        </div>
-        <label>
-          <input type="text" placeholder="Full name" />
-        </label>
-        <button class="red" type="button" onclick="start()"><i class="icon ion-md-lock"></i>Start</button>
-      </form>
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Quizizy</title>
+</head>
 
-    <section id="questions">
-      <h3 id="timer">30 s</h3>
-      <h2 id="question"></h2>
-      <div class="wrapper">
-        <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
-          <p id="answer1"></p>
-          <div type="button"></div>
-        </button>
-        <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
-          <p id="answer2"></p>
-          <div type="button"></div>
-        </button>
-        <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
-          <p id="answer3"></p>
-          <div type="button"></div>
-        </button>
-        <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
-          <p id="answer4"></p>
-          <div type="button"></div>
-        </button>
+<body>
+  <section id="welcome">
+    <form>
+      <div class="segment">
+        <h1>Welcome to QUIZIZY</h1>
       </div>
-      <button id="next">NEXT</button>
-    </section>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-  </body>
+      <label>
+        <input type="text" placeholder="Full name" />
+      </label>
+      <button class="red" type="button" onclick="start()"><i class="icon ion-md-lock"></i>Start</button>
+    </form>
+  </section>
+
+  <section id="questions">
+    <h3 id="timer">30 s</h3>
+    <h4 id="question"></h4>
+    <div class="wrapper">
+      <button id="answer1" class="d-flex btn neumorphic-btn neumorphic-checkbox">
+        <p></p>
+        <div type="button"></div>
+      </button>
+      <button id="answer2" class="d-flex btn neumorphic-btn neumorphic-checkbox">
+        <p></p>
+        <div type="button"></div>
+      </button>
+      <button id="answer3" class="d-flex btn neumorphic-btn neumorphic-checkbox">
+        <p></p>
+        <div type="button"></div>
+      </button>
+      <button id="answer4" class="d-flex btn neumorphic-btn neumorphic-checkbox">
+        <p></p>
+        <div type="button"></div>
+      </button>
+    </div>
+    <button id="next">NEXT</button>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
