@@ -47,7 +47,7 @@
   },
   {
     "id": "3",
-    "question": "3) Which AWS offering enables users to find, buy, and immediately start using software solutions in their AWS environment?",
+    "question": "Which AWS offering enables users to find, buy, and immediately start using software solutions in their AWS environment?",
     "answers": [
       {
         "answer": "A) AWS Config",

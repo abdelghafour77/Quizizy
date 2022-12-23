@@ -1,48 +1,52 @@
+let index = 0;
+let data;
 var timerId
-$.getJSON('data.json', function (data) {
-      data.forEach(item => {
-            setInterval(function () {
-                  $("#question").text(item.question);
-                  // $("#rep1").html(data);
-                  // $("#rep2").html(data);
-                  // $("#rep3").html(data);
-                  // $("#rep4").html(data);
 
-            }, 1000);
-
-            // timer()
-      })
-
+$.getJSON('data.json', function (jsonData) {
+      data = jsonData;
 });
 
-function fetching(data) {
-      $("#question").html(data.question);
-      // $("#rep1").html(data);
-      // $("#rep2").html(data);
-      // $("#rep3").html(data);
-      // $("#rep4").html(data);
+$('#next').click(function () {
+      clearInterval(timerId);
+      timer()
 
-}
+      $('#question').html(data[index].question);
+      $('#answer1').html(data[index].answers[0].answer);
+      $('#answer2').html(data[index].answers[1].answer);
+      $('#answer3').html(data[index].answers[2].answer);
+      $('#answer4').html(data[index].answers[3].answer);
+      index++;
+      if (index >= data.length) {
+            index = 0;
+      }
+});
 
-$("#welcome").hide();
+$("#questions").hide();
 function start() {
       $("#welcome").hide();
       $("#questions").show();
-      timer()
+      $('#question').html(data[index].question);
+      $('#answer1').html(data[index].answers[0].answer);
+      $('#answer2').html(data[index].answers[1].answer);
+      $('#answer3').html(data[index].answers[2].answer);
+      $('#answer4').html(data[index].answers[3].answer);
+
 }
 function timer() {
-      var timeLeft = 12;
+      let timeLeft = 30;
       var elem = $("#timer");
-      var timerId = setInterval(countdown, 1000);
+      clearInterval(timerId)
+      timerId = setInterval(function () {
 
-      function countdown() {
             if (timeLeft == -1) {
                   clearTimeout(timerId);
             } else {
                   elem.text(timeLeft + ' s');
-                  timeLeft--;
+                  timeLeft -= 1;
             }
-      }
+      }, 1000);
+
+
 }
 
 

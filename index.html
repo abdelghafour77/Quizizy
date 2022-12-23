@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quizizy</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Quizizy</title>
-</head>
+  <body>
+    <section id="welcome">
+      <form>
+        <div class="segment">
+          <h1>Welcome to QUIZIZY</h1>
+        </div>
+        <label>
+          <input type="text" placeholder="Full name" />
+        </label>
+        <button class="red" type="button" onclick="start()"><i class="icon ion-md-lock"></i>Start</button>
+      </form>
+    </section>
 
-<body>
-
-  <section id="welcome">
-    <form>
-      <div class="segment">
-        <h1>Welcome to QUIZIZY</h1>
+    <section id="questions">
+      <h3 id="timer">30 s</h3>
+      <h2 id="question"></h2>
+      <div class="wrapper">
+        <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
+          <p id="answer1"></p>
+          <div type="button"></div>
+        </button>
+        <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
+          <p id="answer2"></p>
+          <div type="button"></div>
+        </button>
+        <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
+          <p id="answer3"></p>
+          <div type="button"></div>
+        </button>
+        <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
+          <p id="answer4"></p>
+          <div type="button"></div>
+        </button>
       </div>
-      <label>
-        <input type="text" placeholder="Full name" />
-      </label>
-      <button class="red" type="button" onclick="start()"><i class="icon ion-md-lock"></i>Start</button>
-    </form>
-  </section>
-
-  <section id="questions">
-    <h3 id="timer">30 s</h3>
-    <h2 id="question">
-    </h2>
-    <div class="wrapper">
-      <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
-        <p id="rep1">A) Amazon EC2 costs are billed on a monthly basis.</p>
-        <div type="button"></div>
-      </button>
-      <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
-        <p id="rep2">B) Users retain full administrative access to their Amazon EC2 instances.</p>
-        <div type="button"></div>
-      </button>
-      <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
-        <p id="rep3">C) Amazon EC2 instances can be launched on demand when needed.</p>
-        <div type="button"></div>
-      </button>
-      <button class="d-flex btn neumorphic-btn neumorphic-checkbox">
-        <p id="rep4">D) Users can permanently run enough instances to handle peak workloads.</p>
-        <div type="button"></div>
-      </button>
-    </div>
-  </section>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-  <script src="main.js"></script>
-</body>
-
+      <button id="next">NEXT</button>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
