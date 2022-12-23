@@ -9,28 +9,25 @@ $.getJSON('data.json', function (jsonData) {
 $('#next').click(function () {
       clearInterval(timerId);
       timer()
-
+      fetching()
+      if (index >= data.length) {
+            index = 0;
+      }
+});
+function fetching() {
       $('#question').html(data[index].question);
       $('#answer1').html(data[index].answers[0].answer);
       $('#answer2').html(data[index].answers[1].answer);
       $('#answer3').html(data[index].answers[2].answer);
       $('#answer4').html(data[index].answers[3].answer);
       index++;
-      if (index >= data.length) {
-            index = 0;
-      }
-});
+}
 
 $("#questions").hide();
 function start() {
       $("#welcome").hide();
       $("#questions").show();
-      $('#question').html(data[index].question);
-      $('#answer1').html(data[index].answers[0].answer);
-      $('#answer2').html(data[index].answers[1].answer);
-      $('#answer3').html(data[index].answers[2].answer);
-      $('#answer4').html(data[index].answers[3].answer);
-
+      fetching()
 }
 function timer() {
       let timeLeft = 30;
@@ -39,14 +36,14 @@ function timer() {
       timerId = setInterval(function () {
 
             if (timeLeft == -1) {
-                  clearTimeout(timerId);
+                  clearInterval(timerId);
+                  timer()
+                  fetching()
             } else {
                   elem.text(timeLeft + ' s');
                   timeLeft -= 1;
             }
       }, 1000);
-
-
 }
 
 
