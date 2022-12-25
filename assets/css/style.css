@@ -26,13 +26,21 @@
   }
 }
 
-body,
 html {
   background-color: #ebecf0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   height: 100vh;
   display: flex;
   align-items: center;

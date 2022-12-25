@@ -63,7 +63,7 @@
     {
       "extensionName": ".min.css",
       "format": "compressed",
-      "savePath": "./public/css"
+      "savePath": "/assets/css"
     }
   ],
   "liveSassCompile.settings.generateMap": false,
