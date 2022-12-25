@@ -13,7 +13,7 @@
       },
       {
         "answer": "C) Amazon EC2 instances can be launched on demand when needed.",
-        "correct": false
+        "correct": true
       },
       {
         "answer": "D) Users can permanently run enough instances to handle peak workloads.",
@@ -32,7 +32,7 @@
       },
       {
         "answer": "B) AWS Database Migration Service (AWS DMS)",
-        "correct": false
+        "correct": true
       },
       {
         "answer": "C) Amazon EC2",
@@ -63,10 +63,10 @@
       },
       {
         "answer": "D) AWS Marketplace",
-        "correct": false
+        "correct": true
       }
     ],
-    "justify": "B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases."
+    "justify": "D – AWS Marketplace is a digital catalog with thousands of software listings from independent software vendors that makes it easy to find, test, buy, and deploy software that runs on AWS."
   },
   {
     "id": "4",
@@ -86,10 +86,10 @@
       },
       {
         "answer": "D) Amazon Virtual Private Cloud (Amazon VPC)",
-        "correct": false
+        "correct": true
       }
     ],
-    "justify": "B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases."
+    "justify": "D – Amazon VPC lets users provision a logically isolated section of the AWS Cloud where users can launch AWS resources in a virtual network that they define."
   },
   {
     "id": "5",
@@ -101,7 +101,7 @@
       },
       {
         "answer": "B) Maintaining physical hardware",
-        "correct": false
+        "correct": true
       },
       {
         "answer": "C) Securing application access and data",
@@ -112,7 +112,7 @@
         "correct": false
       }
     ],
-    "justify": "B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases."
+    "justify": " B – Maintaining physical hardware is an AWS responsibility under the AWS shared responsibility model."
   },
   {
     "id": "6",
@@ -124,7 +124,7 @@
       },
       {
         "answer": "B) Edge locations",
-        "correct": false
+        "correct": true
       },
       {
         "answer": "C) Availability Zones",
@@ -135,7 +135,7 @@
         "correct": false
       }
     ],
-    "justify": "B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases."
+    "justify": "B – To deliver content to users with lower latency, Amazon CloudFront uses a global network of points of presence (edge locations and regional edge caches) worldwide."
   },
   {
     "id": "7",
@@ -151,14 +151,14 @@
       },
       {
         "answer": "C) Enable multi-factor authentication",
-        "correct": false
+        "correct": true
       },
       {
         "answer": "D) Enable AWS CloudTrail",
         "correct": false
       }
     ],
-    "justify": "B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases."
+    "justify": "C – Multi-factor authentication (MFA) is a simple best practice that adds an extra layer of protection on top of a username and password. With MFA enabled, when a user signs in to an AWS Management Console, they will be prompted for their username and password (the first factor—what they know), as well as for an authentication code from their MFA device (the second factor—what they have). Taken together, these multiple factors provide increased security for AWS account settings and resources."
   },
   {
     "id": "8",
@@ -170,7 +170,7 @@
       },
       {
         "answer": "B) AWS CloudTrail",
-        "correct": false
+        "correct": true
       },
       {
         "answer": "C) AWS X-Ray",
@@ -181,7 +181,7 @@
         "correct": false
       }
     ],
-    "justify": "B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases."
+    "justify": "B – AWS CloudTrail helps users enable governance, compliance, and operational and risk auditing of their AWS accounts. Actions taken by a user, role, or an AWS service are recorded as events in CloudTrail. Events include actions taken in the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs and APIs."
   },
   {
     "id": "9",
@@ -189,7 +189,7 @@
     "answers": [
       {
         "answer": "A) Amazon Simple Notification Service (Amazon SNS)",
-        "correct": false
+        "correct": true
       },
       {
         "answer": "B) AWS CloudTrail",
@@ -204,7 +204,7 @@
         "correct": false
       }
     ],
-    "justify": "B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases."
+    "justify": "A - Amazon SNS and Amazon CloudWatch are integrated so users can collect, view, and analyze metrics for every active SNS. Once users have configured CloudWatch for Amazon SNS, they can gain better insight into the performance of their Amazon SNS topics, push notifications, and SMS deliveries."
   },
   {
     "id": "10",
@@ -224,9 +224,9 @@
       },
       {
         "answer": "D) AWS Acceptable Use Policy",
-        "correct": false
+        "correct": true
       }
     ],
-    "justify": "B - AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases."
+    "justify": "D - The AWS Acceptable Use Policy provides information regarding prohibited actions on the AWS infrastructure. "
   }
 ]
