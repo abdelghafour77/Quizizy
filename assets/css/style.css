@@ -1,3 +1,31 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+@media (min-width: 36em) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 48em) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 62em) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 75em) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
 body,
 html {
   background-color: #ebecf0;
@@ -9,6 +37,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
 }
 
 body,
@@ -231,4 +267,10 @@ p {
   border-top: 9px solid #ebecf0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

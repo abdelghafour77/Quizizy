@@ -5,11 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/scss/style.css" />
   <title>Quizizy</title>
 </head>
 
-<body>
+<body class="container">
+
   <section id="welcome">
     <form>
       <div class="segment">
@@ -54,8 +55,18 @@
     <button id="next">NEXT</button>
 
   </section>
-  <script src="jquery.min.js"></script>
-  <script src="main.js"></script>
+  <section id="results">
+    <h4 id="score"> Your score is <span>2/10</span></h4>
+    <div>
+      <h4>Why is AWS more economical than traditional data centers for applications with varying compute workloads?</h4>
+      <h5 class="text-truncate"> answer : C - The ability to launch instances on demand when needed allows users to
+        launch and terminate
+        instances in response to a varying workload. This is a more economical practice than purchasing enough
+        on-premises servers to handle the peak load.</h5>
+    </div>
+  </section>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
