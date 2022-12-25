@@ -16,7 +16,7 @@
         <h1>Welcome to QUIZIZY</h1>
       </div>
       <label>
-        <input type="text" placeholder="Full name" />
+        <input type="text" placeholder="Full name" id="full_name" />
       </label>
       <button class="red" type="button" onclick="start()"><i class="icon ion-md-lock"></i>Start</button>
     </form>
@@ -33,6 +33,7 @@
     </div>
     <h4 id="question"></h4>
     <div class="wrapper">
+      <input type="hidden" id="id" value="">
       <button id="answer1" class="d-flex btn neumorphic-btn neumorphic-checkbox">
         <p></p>
         <div type="button"></div>

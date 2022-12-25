@@ -2,7 +2,7 @@ let index = 0;
 let data;
 var timerId
 var user_answers = []
-var answer = {}
+
 
 $("#questions").hide();
 
@@ -11,7 +11,14 @@ $('.neumorphic-checkbox').on('click', function () {
 });
 
 $.getJSON('data.json', function (jsonData) {
-      data = jsonData;
+
+      let original_data = jsonData;
+      // to shuffle array 
+      data = original_data.slice().sort(function () {
+            return 0.5 - Math.random();
+      });
+      console.log(original_data); // Original array
+      console.log(data); // Shuffled array
 });
 
 $('#next').click(function () {
@@ -19,6 +26,8 @@ $('#next').click(function () {
 });
 
 function core() {
+      var answer = {}
+      answer.id = $('#id').val()
       answer.answer1 = $('#answer1').hasClass('neumorphic-checkbox_active')
       answer.answer2 = $('#answer2').hasClass('neumorphic-checkbox_active')
       answer.answer3 = $('#answer3').hasClass('neumorphic-checkbox_active')
@@ -31,7 +40,9 @@ function core() {
       fetching()
       $("#progress").text(index + '/' + data.length)
       if (index >= data.length) {
-            index = 0;
+            // index = 0;
+            results();
+
       }
 }
 
@@ -43,6 +54,7 @@ function clearAnswers() {
 }
 
 function fetching() {
+      $('#id').val(data[index].id);
       $('#question').html(data[index].question);
       $('#answer1 p').html(data[index].answers[0].answer);
       $('#answer2 p').html(data[index].answers[1].answer);
@@ -53,6 +65,8 @@ function fetching() {
 }
 
 function start() {
+
+      $("#name").text(($("#full_name").val()));
       $("#welcome").hide();
       $("#questions").show();
       fetching()
@@ -74,6 +88,8 @@ function timer() {
             }
       }, 1000);
 }
+
+
 
 
 
