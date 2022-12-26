@@ -231,7 +231,23 @@ p {
   }
 }
 .text-truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+  // white-space: nowrap;
+}
+#results {
+  width: 80%;
+  .question {
+    border-radius: $border;
+    padding: 1rem;
+    color: #61677c;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px $color-white, 5px 5px 20px $color-shadow;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+    .correct-answer {
+      color: green;
+    }
+  }
 }
