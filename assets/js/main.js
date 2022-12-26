@@ -5,8 +5,8 @@ var user_answers = []
 
 $("#questions").hide();
 $("#results").hide();
-$("#welcome").show();
-$("#results").hide();
+$("#welcome").hide();
+$("#results").show();
 
 $('.neumorphic-checkbox').on('click', function () {
       $(this).toggleClass('neumorphic-checkbox_active');
