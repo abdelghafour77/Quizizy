@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,24 +230,45 @@ p {
     }
   }
 }
-.text-truncate {
-  // overflow: hidden;
-  // text-overflow: ellipsis;
-  // white-space: nowrap;
-}
+
 #results {
   width: 80%;
-  .question {
+  margin-top: 4rem;
+  #score {
     border-radius: $border;
     padding: 1rem;
     color: #61677c;
     font-weight: bold;
     box-shadow: -5px -5px 20px $color-white, 5px 5px 20px $color-shadow;
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
+    margin-bottom: 5rem;
+    margin: 2rem auto;
+  }
+  .question {
+    border-radius: $border;
+    padding: 1rem;
+    color: #61677c;
+    // font-weight: bold;
+    box-shadow: -5px -5px 20px $color-white, 5px 5px 20px $color-shadow;
+    transition: all 0.2s ease-in-out;
+    // cursor: pointer;
     font-weight: 600;
+    margin: 2rem auto;
     .correct-answer {
       color: green;
+      span {
+        font-weight: bold;
+        font-size: 120%;
+      }
+    }
+    .justification {
+      span {
+        font-weight: bold;
+        font-size: 120%;
+      }
     }
   }
+}
+#questions {
+  width: 800px;
 }

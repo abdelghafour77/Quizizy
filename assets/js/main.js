@@ -1,7 +1,9 @@
 let index = 0;
+let original_data
 let data;
 var timerId
 var user_answers = []
+
 
 $("#questions").hide();
 $("#results").hide();
@@ -14,13 +16,13 @@ $('.neumorphic-checkbox').on('click', function () {
 
 $.getJSON('assets/json/data.json', function (jsonData) {
 
-      let original_data = jsonData;
+      original_data = jsonData;
       // to shuffle array 
       data = original_data.slice().sort(function () {
             return 0.5 - Math.random();
       });
       // console.log(original_data); // Original array
-      console.log(data); // Shuffled array
+      // console.log(data); // Shuffled array
 });
 
 $('#next').click(function () {
@@ -35,7 +37,7 @@ function core() {
       answer.answer3 = $('#answer3').hasClass('neumorphic-checkbox_active')
       answer.answer4 = $('#answer4').hasClass('neumorphic-checkbox_active')
       user_answers.push(answer)
-      console.log(user_answers)
+      // console.log(user_answers)
       clearInterval(timerId);
       timer()
       clearAnswers()
@@ -44,7 +46,6 @@ function core() {
       if (index > data.length) {
             // index = 0;
             results();
-
       }
 }
 
@@ -98,14 +99,64 @@ function results() {
       $("#results").show();
 
       let a = 0;
+      let res = [];
       data.forEach(function (question, index) {
             if (question.answers[0].correct == user_answers[index].answer1 &&
                   question.answers[1].correct == user_answers[index].answer2 &&
                   question.answers[2].correct == user_answers[index].answer3 &&
                   question.answers[3].correct == user_answers[index].answer4) {
                   a++
+
+            } else {
+                  res.push(user_answers[index].id)
             }
       });
+      console.log(res);
+      res.sort((a, b) => a - b);
+      let i = 0;
+      console.log(res);
+      let result;
+      let re = '';
+      original_data.forEach(element => {
+            // console.log(element.id)
+            // console.log(res[i])
+            // console.log("-------")
+            if (element.id == res[i]) {
+                  result = element.answers.find(item => item.correct === true)
+                  console.log(user_answers[element.id])
+                  re += `
+                        <div class="question">
+                              <h4>${element.question}</h4>
+                              <h5 class="correct-answer"><span>correct answer : </span>${result.answer}</h5>
+                              <h5 class="justification"><span>Justification : </span> ${element.justify}</h5>
+                        </div>`;
+                  i++;
+            }
+
+
+      });
+      // <h5 class="wrong-answer"><span>your answer : </span>${user_answers[element.id].find(item => item.correct === true)}</h5>
+
+      // res.forEach(element => {
+
+      //       re += `
+      //       <div class="question">
+      //             <h4>${original_data[element - 1].question}</h4>
+      //             <h5 class="correct-answer"><span>answer :</span> Amazon EC2 instances can be launched on demand when needed.</h5>
+      //             <h5 class="justification"><span>Justification :</span> The ability to launch instances on demand when needed allows users to launch and terminate instances in response to a varying workload. This is a more economical practice than purchasing enough on-premises servers to handle the peak load.</h5>
+      //       </div>`;
+
+      //       // $('#id').val(data[element].id);
+      //       // $('#question').html(data[element].question);
+      //       // $('#answer1 p').html(data[element].answers[0].answer);
+      //       // $('#answer2 p').html(data[element].answers[1].answer);
+      //       // $('#answer3 p').html(data[element].answers[2].answer);
+      //       // $('#answer4 p').html(data[element].answers[3].answer);
+      // });
+      // console.log(re)
+      $("#result_questions").html(re)
+      // console.log(question);
+
       $("#score span").text(a + "/" + data.length);
 
 }

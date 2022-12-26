@@ -168,7 +168,6 @@ html {
 }
 
 body {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -398,17 +397,39 @@ p {
 
 #results {
   width: 80%;
+  margin-top: 4rem;
 }
-#results .question {
+#results #score {
   border-radius: 1rem;
   padding: 1rem;
   color: #61677c;
   font-weight: bold;
   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
   transition: all 0.2s ease-in-out;
-  cursor: pointer;
+  margin-bottom: 5rem;
+  margin: 2rem auto;
+}
+#results .question {
+  border-radius: 1rem;
+  padding: 1rem;
+  color: #61677c;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
   font-weight: 600;
+  margin: 2rem auto;
 }
 #results .question .correct-answer {
   color: green;
+}
+#results .question .correct-answer span {
+  font-weight: bold;
+  font-size: 120%;
+}
+#results .question .justification span {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+#questions {
+  width: 800px;
 }
