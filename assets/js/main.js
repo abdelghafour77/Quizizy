@@ -37,14 +37,12 @@ function core() {
       answer.answer3 = $('#answer3').hasClass('neumorphic-checkbox_active')
       answer.answer4 = $('#answer4').hasClass('neumorphic-checkbox_active')
       user_answers.push(answer)
-      // console.log(user_answers)
       clearInterval(timerId);
       timer()
       clearAnswers()
       fetching()
       $("#progress").text(index + '/' + data.length)
       if (index > data.length) {
-            // index = 0;
             results();
       }
 }
@@ -97,6 +95,7 @@ function timer() {
 function results() {
       $("#questions").hide();
       $("#results").show();
+      party.confetti(this)
 
       let a = 0;
       let res = [];
@@ -127,7 +126,7 @@ function results() {
                   re += `
                         <div class="question">
                               <h4>${element.question}</h4>
-                              <h5 class="correct-answer"><span>correct answer : </span>${result.answer}</h5>
+                              <h5 class="correct-answer"><span>Correct answer : </span>${result.answer}</h5>
                               <h5 class="justification"><span>Justification : </span> ${element.justify}</h5>
                         </div>`;
                   i++;
@@ -135,31 +134,20 @@ function results() {
 
 
       });
-      // <h5 class="wrong-answer"><span>your answer : </span>${user_answers[element.id].find(item => item.correct === true)}</h5>
 
-      // res.forEach(element => {
-
-      //       re += `
-      //       <div class="question">
-      //             <h4>${original_data[element - 1].question}</h4>
-      //             <h5 class="correct-answer"><span>answer :</span> Amazon EC2 instances can be launched on demand when needed.</h5>
-      //             <h5 class="justification"><span>Justification :</span> The ability to launch instances on demand when needed allows users to launch and terminate instances in response to a varying workload. This is a more economical practice than purchasing enough on-premises servers to handle the peak load.</h5>
-      //       </div>`;
-
-      //       // $('#id').val(data[element].id);
-      //       // $('#question').html(data[element].question);
-      //       // $('#answer1 p').html(data[element].answers[0].answer);
-      //       // $('#answer2 p').html(data[element].answers[1].answer);
-      //       // $('#answer3 p').html(data[element].answers[2].answer);
-      //       // $('#answer4 p').html(data[element].answers[3].answer);
-      // });
-      // console.log(re)
       $("#result_questions").html(re)
       // console.log(question);
 
       $("#score span").text(a + "/" + data.length);
+      // party.confetti($("#results"))
+
 
 }
+
+party.confetti(runButton, {
+      count: party.variation.range(20, 40),
+});
+
 
 
 
