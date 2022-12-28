@@ -95,7 +95,7 @@ function timer() {
 function results() {
       $("#questions").hide();
       $("#results").show();
-      party.confetti(this)
+      // party.confetti(this)
 
       let a = 0;
       let res = [];
@@ -144,9 +144,9 @@ function results() {
 
 }
 
-party.confetti(runButton, {
-      count: party.variation.range(20, 40),
-});
+// party.confetti(runButton, {
+//       count: party.variation.range(20, 40),
+// });
 
 
 
